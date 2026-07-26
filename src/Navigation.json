@@ -1,17 +1,67 @@
-[
+{
+  "navbar": [
     {
-        "title" : "Master"
+      "title": "MASTER",
+      "items": [
+        {"label":"Main Ledger", "link":"/master/main-ledger"},
+        {"label":"Sub Ledger", "link":"/master/sub-ledger"},
+        {"label":"Billing Item", "link":"/master/billing-item"},
+        {"label":"Flat", "link":"/master/flat"},
+        {"label":"Vendor", "link":"/master/vendor"},
+        {"label":"Customer", "link":"/master/customer"},
+        {"label":"Bill Template", "link":"/master/bill-template"},
+        {"label":"Customer Mapping", "link":"/master/customer-mapping"}
+      ]
     },
     {
-        "title" : "Transaction"
+      "title": "TRANSACTION",
+      "items": [
+        {"label":"Opening Bill", "link":"/transaction/opening-bill"},
+        {"label":"Opening Ledger", "link":"/transaction/opening-ledger"},
+        {"label":"Customer Auto Bill", "link":"/transaction/customer-auto-bill"},
+        {"label":"Customer Manual Bill", "link":"/transaction/customer-manual-bill"},
+        {"label":"Customer Utility Bill","link":"/transaction/customer-utility-bill"},
+        {"label":"Voucher Entry", "link":"/transaction/voucher-entry"},
+        {"label":"Journal Entry", "link":"/transaction/journal-entry"},
+        {"label":"Send Email", "link":"/transaction/send-email"}
+      ]
     },
     {
-        "title" : "Report"
+      "title": "REPORT",
+      "items": [
+        {"label":"Customer Master Report", "link":"/report/customer-master-report"},
+        {"label":"Vendor Master Report", "link":"/report/vendor-master-report"},
+        {"label":"Ledger Master Report", "link":"/report/ledger-master-report"},
+        {"label":"Vendor Ledger Report", "link":"/report/vendor-ledger-report"},
+        {"label":"Customer Ledger Report", "link":"/report/customer-ledger-report"},
+        {"label":"General Ledger Report", "link":"/report/general-ledger-report"},
+        {"label":"Journal Register", "link":"/report/journal-register"},
+        {"label":"Bill Register Print", "link":"/report/bill-register-print"},
+        {"label":"Utility Bill Register Print", "link":"/report/utility-bill-register-print"},
+        {"label":"Voucher Register Print", "link":"/report/voucher-register-print"},
+        {"label":"Bill Register", "link":"/report/bill-register"},
+        {"label":"Outstanding Report", "link":"/report/outstanding-report"},
+        {"label":"Cash-Bank Book Report", "link":"/report/cash-bank-book-report"},
+        {"label":"IE Statement", "link":"/report/ie-statement"},
+        {"label":"Balance Sheet", "link":"/report/balance-sheet"}
+      ]
     },
     {
-        "title" : "Administration"
+      "title": "ADMINISTRATION",
+      "items": [
+        {"label":"User Creation", "link" : "/administration/user-creation"},
+        {"label":"Financial Year", "link" : "/administration/financial-year"},
+        {"label":"FY Year End", "link" : "/administration/fy-year-end"},
+        {"label":"Backup Database", "link" : "/administration/backup-database"}
+      ]
     },
     {
-        "title" : "User Panel"
+      "title": "USER PANEL",
+      "items": [
+        {"label":"User Profile", "link" :"/user/user-profile"},
+        {"label":"Change Password", "link":"/user/change-password"},
+        {"label":"Log out", "link":"/"}
+      ]
     }
-]
+  ]
+}
