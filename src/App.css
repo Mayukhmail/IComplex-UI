@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+:root{
+    --primary-color: #7b1fa2;       /* Deep Purple */
+    --secondary-color: #ce93d8;     /* Soft Lavender */
+    --accent-color: #9c27b0;        /* Bright Magenta */
+    --background-light: #f5f5f5;    /* Misty Lilac */
+    --background-dark: #4a148c;     /* Royal Violet */
+    --surface-color: #e1bee7;       /* Pale Mauve */
+    --border-color: #ba68c8;   
+    --text-primary: #333333;     /* Muted Purple */
+}

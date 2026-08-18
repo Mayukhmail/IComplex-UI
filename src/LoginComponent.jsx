@@ -15,6 +15,8 @@ import Button from '@mui/material/Button'
 import SaveIcon from '@mui/icons-material/Save'
 import Box from '@mui/material/Box'
 import { Navigate, useNavigate } from 'react-router-dom';
+import { useDispatch } from "react-redux";
+import { setUserData } from "./userSlice";
 
 function LoginComponent() {
   const BASE_URL = import.meta.env.VITE_API_BASE_URL;
@@ -48,25 +50,6 @@ function LoginComponent() {
   return () => clearInterval(intervalId);
 }, [images.length])
 
-// //Array of objects for FY-Year
-// const fyYear = [
-//   {
-//     value: 'USD',
-//     label: '2021-2022',
-//   },
-//   {
-//     value: 'EUR',
-//     label: '2022-2023',
-//   },
-//   {
-//     value: 'BTC',
-//     label: '2023-2024',
-//   },
-//   {
-//     value: 'JPY',
-//     label: '2024-2025',
-//   },
-// ];
 
 let isToggled = false; //Setting inital Toggle
 if(localStorage.getItem("visible") == "true"){
@@ -107,6 +90,7 @@ const [password, setPassword] = useState("")
 const [loading, setLoading] = useState(false)
 const navigate = useNavigate();
 
+const dispatch = useDispatch();
 const submitLogin = async function(){
   if(isVisible == true){
     localStorage.setItem("username",userName);
@@ -124,8 +108,15 @@ const submitLogin = async function(){
     });
 
     const data = await response.json();
+    const userRoleData = data.data.userrole;
+    dispatch(setUserData(userRoleData));
+
+
     if(data.status == "Success"){
       navigate('/dashboard');
+      sessionStorage.setItem("email", data.data.email);
+      sessionStorage.setItem("fullname", data.data.fullname);
+      sessionStorage.setItem("mobile", data.data.mobile);
     }else{
       alert(data.error || "Invalid username or password");
       setLoading(loading);
